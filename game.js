@@ -1,8 +1,7 @@
 const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));   /* array.from ?? */
+const choices = Array.from(document.getElementsByClassName("choice-text"));   
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
-//const finalScore= document.getElementById('finalScore');
 
 let currentQuestion = {};
 let acceptAnswers = false;
@@ -71,21 +70,20 @@ getNewQuestion = () => {
         return window.location.assign('end.html');
     }
     questionCounter++;
-    //progressText.innerText = questionCounter/max_questions;
     //update the progressbar
     progressBarFull.style.width = `${(questionCounter / max_questions) * 100}%`;
 
 
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);     /* ?? */
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);     
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.ques; 
     
-    choices.forEach(option => {                                                      /* forEach used for each choice iteration */
+    choices.forEach(option => {                                                      
         const number = option.dataset['number'];
         option.innerText = currentQuestion['choice' + number];
     })
 
-    availableQuestions.splice(questionIndex, 1);                               /* splice?? */
+    availableQuestions.splice(questionIndex, 1);                               
     acceptAnswers = true;
 };
 
@@ -104,16 +102,16 @@ choices.forEach(choice => {
         
         const classToApply = 
             selectedAnswer == currentQuestion.answer ?  "correct" : "incorrect";
-        console.log(classToApply);                                                    /* ?? */
+        console.log(classToApply);                                                    
 
         if (classToApply === "correct") {
             incrementScore(correct_bonus);
         }
 
-        selectedChoice.parentElement.classList.add(classToApply);                   /* ?? */
+        selectedChoice.parentElement.classList.add(classToApply);                   
 
         setTimeout( () => {
-            selectedChoice.parentElement.classList.remove(classToApply);                   /* ?? */
+            selectedChoice.parentElement.classList.remove(classToApply);                   
             getNewQuestion();
         }, 1000);
 
