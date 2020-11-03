@@ -1,0 +1,21 @@
+img {
+  margin-top: -4rem;
+  height: 10rem;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  margin: 1rem;
+}
+
+h2 {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+#finalScore {
+  margin-bottom: 5rem;
+  font-size: 3.5rem;
+  color: rgb(255, 227, 102);
+}

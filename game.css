@@ -1,0 +1,95 @@
+body {
+  background: url("bulb08.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.justify-center {
+  width: 100%;
+  padding-left: 5rem;
+  padding-right: 28rem;
+  padding-top: 1.2rem;
+}
+
+.choice-container {
+  display: flex;
+  margin-bottom: 2rem;
+  width: 100%;
+  border: 0.5rem solid darkcyan;
+  border-radius: 5rem;
+  background-color: white;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgb(255, 255, 255, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: darkcyan;
+  color: white;
+  font-weight: 800;
+  border-radius: 3rem 5rem 5rem 3rem;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+  color: darkcyan;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.correct {
+  background-color: rgb(91, 228, 91);
+}
+
+.incorrect {
+  background-color: rgb(252, 118, 95);
+}
+
+/* heads-up */
+#hud {
+  display: flex;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+#question {
+  margin-top: 2rem;
+  color: rgb(255, 227, 102);
+  font-size: 3.4rem;
+}
+
+#all-choices {
+  margin-top: 2rem;
+}
+
+#progressBar {
+  width: 100%;
+  height: 2rem;
+  border: 0.5rem solid inear-gradient(to right, pink, purple);
+  border-radius: 5rem;
+  margin-top: -3rem;
+}
+
+#progressBarFull {
+  height: 1rem;
+  background-image: linear-gradient(to right, pink, purple);
+  width: 0%;
+  border-radius: 5rem;
+}
+
+#score {
+  display: none;
+}
+
+#comments {
+  color: white;
+  visibility: hidden;
+}

@@ -1,0 +1,122 @@
+body {
+  background-image: url("bbb01.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Itim";
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 5.4rem;
+  color: white;
+}
+
+h1 > span {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+/* UTILITIES */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /*works with flex display*/
+  align-items: center; /*works with flex display*/
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.home-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#rules {
+  font-size: 1.6rem;
+  padding: 2rem 8rem;
+  width: 54%;
+  text-align: center;
+  color: white;
+  list-style-type: disc;
+}
+
+/* BUTTONS */
+.btn {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+  width: 20rem;
+  text-align: center;
+  border: 0.8rem solid darkcyan;
+  border-radius: 5rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: white;
+  background-color: darkcyan;
+  font-weight: 800;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgb(255, 255, 255, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+  color: darkcyan;
+  font-weight: 800;
+  background-color: white;
+}
+
+btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Form */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
